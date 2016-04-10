@@ -6,7 +6,5 @@
              xmlns:local="clr-namespace:GridExample"
              mc:Ignorable="d" 
              d:DesignHeight="325" d:DesignWidth="525">
-    <Grid x:Name="griglia" Background="WhiteSmoke" MouseLeftButtonDown="griglia_MouseLeftButtonDown" MouseUp="griglia_MouseUp">
-            
-    </Grid>
+    <Grid x:Name="griglia" Background="WhiteSmoke"/>
 </UserControl>

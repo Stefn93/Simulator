@@ -117,21 +117,12 @@ namespace GridExample
             
             foreach (GridCell cell in griglia.Children)
             {
-                cell.Background = new SolidColorBrush(Colors.Crimson);
+                cell.Background = new SolidColorBrush(Colors.DarkBlue);
                 Console.Out.WriteLine(cell.getX());
                 Console.Out.WriteLine(cell.getY());
             }
 
         }
-
-        private void griglia_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        { 
-
-        }
-
-        private void griglia_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-           
-        }
+        
     }
 }
