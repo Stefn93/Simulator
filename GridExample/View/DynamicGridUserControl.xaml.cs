@@ -128,5 +128,10 @@ namespace GridExample
         { 
 
         }
+
+        private void griglia_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+           
+        }
     }
 }

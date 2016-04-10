@@ -86,6 +86,12 @@ namespace GridExample {
             
             #line default
             #line hidden
+            
+            #line 9 "..\..\..\View\DynamicGridUserControl.xaml"
+            this.griglia.MouseUp += new System.Windows.Input.MouseButtonEventHandler(this.griglia_MouseUp);
+            
+            #line default
+            #line hidden
             return;
             }
             this._contentLoaded = true;

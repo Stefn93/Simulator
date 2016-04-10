@@ -26,13 +26,5 @@ namespace GridExample
             InitializeComponent();
         }
 
-        private void Window_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            if (grid.griglia.Children.GetType() == typeof(GridCell))
-            {
-                (grid.griglia).Background = new SolidColorBrush(Colors.Beige);
-            }
-            //(grid.griglia.Children as GridCell).Background = new SolidColorBrush(Colors.Chocolate);
-        }
     }
 }
