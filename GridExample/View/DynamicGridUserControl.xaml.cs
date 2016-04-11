@@ -118,8 +118,8 @@ namespace GridExample
             foreach (GridCell cell in griglia.Children)
             {
                 cell.Background = new SolidColorBrush(Colors.DarkBlue);
-                Console.Out.WriteLine(cell.getX());
-                Console.Out.WriteLine(cell.getY());
+                //Console.Out.WriteLine(cell.getX());
+                //Console.Out.WriteLine(cell.getY());
             }
 
         }
