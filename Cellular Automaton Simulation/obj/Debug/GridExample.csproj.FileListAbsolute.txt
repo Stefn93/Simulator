@@ -1,0 +1,36 @@
+c:\users\danie\documents\visual studio 2015\Projects\GridExample\GridExample\bin\Debug\GridExample.exe.config
+c:\users\danie\documents\visual studio 2015\Projects\GridExample\GridExample\bin\Debug\GridExample.exe
+c:\users\danie\documents\visual studio 2015\Projects\GridExample\GridExample\bin\Debug\GridExample.pdb
+c:\users\danie\documents\visual studio 2015\Projects\GridExample\GridExample\obj\Debug\GridExample.csprojResolveAssemblyReference.cache
+c:\users\danie\documents\visual studio 2015\Projects\GridExample\GridExample\obj\Debug\View\MainWindow.g.cs
+c:\users\danie\documents\visual studio 2015\Projects\GridExample\GridExample\obj\Debug\App.g.cs
+c:\users\danie\documents\visual studio 2015\Projects\GridExample\GridExample\obj\Debug\GridExample_MarkupCompile.cache
+c:\users\danie\documents\visual studio 2015\Projects\GridExample\GridExample\obj\Debug\GridExample_MarkupCompile.lref
+c:\users\danie\documents\visual studio 2015\Projects\GridExample\GridExample\obj\Debug\View\MainWindow.baml
+c:\users\danie\documents\visual studio 2015\Projects\GridExample\GridExample\obj\Debug\GridExample.g.resources
+c:\users\danie\documents\visual studio 2015\Projects\GridExample\GridExample\obj\Debug\GridExample.Properties.Resources.resources
+c:\users\danie\documents\visual studio 2015\Projects\GridExample\GridExample\obj\Debug\GridExample.csproj.GenerateResource.Cache
+c:\users\danie\documents\visual studio 2015\Projects\GridExample\GridExample\obj\Debug\GridExample.exe
+c:\users\danie\documents\visual studio 2015\Projects\GridExample\GridExample\obj\Debug\GridExample.pdb
+c:\users\danie\documents\visual studio 2015\Projects\GridExample\GridExample\obj\Debug\View\DynamicGridUserControl.g.cs
+c:\users\danie\documents\visual studio 2015\Projects\GridExample\GridExample\obj\Debug\GeneratedInternalTypeHelper.g.cs
+c:\users\danie\documents\visual studio 2015\Projects\GridExample\GridExample\obj\Debug\View\DynamicGridUserControl.baml
+c:\users\danie\documents\visual studio 2015\Projects\GridExample\GridExample\obj\Debug\App.baml
+C:\Users\Stefano\Documents\GitHub\GridExample\GridExample\bin\Debug\GridExample.exe.config
+C:\Users\Stefano\Documents\GitHub\GridExample\GridExample\obj\Debug\GridExample.exe
+C:\Users\Stefano\Documents\GitHub\GridExample\GridExample\obj\Debug\GridExample.pdb
+C:\Users\Stefano\Documents\GitHub\GridExample\GridExample\bin\Debug\GridExample.exe
+C:\Users\Stefano\Documents\GitHub\GridExample\GridExample\bin\Debug\GridExample.pdb
+C:\Users\Stefano\Documents\GitHub\GridExample\GridExample\obj\Debug\GridExample.csprojResolveAssemblyReference.cache
+C:\Users\Stefano\Documents\GitHub\GridExample\GridExample\obj\Debug\View\DynamicGridUserControl.g.cs
+C:\Users\Stefano\Documents\GitHub\GridExample\GridExample\obj\Debug\View\MainWindow.g.cs
+C:\Users\Stefano\Documents\GitHub\GridExample\GridExample\obj\Debug\App.g.cs
+C:\Users\Stefano\Documents\GitHub\GridExample\GridExample\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Stefano\Documents\GitHub\GridExample\GridExample\obj\Debug\GridExample_MarkupCompile.cache
+C:\Users\Stefano\Documents\GitHub\GridExample\GridExample\obj\Debug\GridExample_MarkupCompile.lref
+C:\Users\Stefano\Documents\GitHub\GridExample\GridExample\obj\Debug\App.baml
+C:\Users\Stefano\Documents\GitHub\GridExample\GridExample\obj\Debug\View\DynamicGridUserControl.baml
+C:\Users\Stefano\Documents\GitHub\GridExample\GridExample\obj\Debug\View\MainWindow.baml
+C:\Users\Stefano\Documents\GitHub\GridExample\GridExample\obj\Debug\GridExample.g.resources
+C:\Users\Stefano\Documents\GitHub\GridExample\GridExample\obj\Debug\GridExample.Properties.Resources.resources
+C:\Users\Stefano\Documents\GitHub\GridExample\GridExample\obj\Debug\GridExample.csproj.GenerateResource.Cache

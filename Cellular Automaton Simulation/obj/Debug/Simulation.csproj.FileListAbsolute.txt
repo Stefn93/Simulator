@@ -1,0 +1,13 @@
+C:\Users\Stefano\Documents\GitHub\Simulator\GridExample\obj\Debug\View\GridCell.g.cs
+C:\Users\Stefano\Documents\GitHub\Simulator\GridExample\obj\Debug\View\DynamicGridUserControl.g.cs
+C:\Users\Stefano\Documents\GitHub\Simulator\GridExample\obj\Debug\View\MainWindow.g.cs
+C:\Users\Stefano\Documents\GitHub\Simulator\GridExample\obj\Debug\App.g.cs
+C:\Users\Stefano\Documents\GitHub\Simulator\GridExample\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Stefano\Documents\GitHub\Simulator\GridExample\obj\Debug\GridExample_MarkupCompile.cache
+C:\Users\Stefano\Documents\GitHub\Simulator\GridExample\obj\Debug\GridExample_MarkupCompile.lref
+C:\Users\Stefano\Documents\GitHub\Simulator\GridExample\obj\Debug\GridExample.exe
+C:\Users\Stefano\Documents\GitHub\Simulator\GridExample\obj\Debug\GridExample.pdb
+C:\Users\Stefano\Documents\GitHub\Simulator\GridExample\obj\Debug\Simulation.csprojResolveAssemblyReference.cache
+C:\Users\Gianluca\Documents\Visual Studio 2015\Simulator\Cellular Automaton Simulation\bin\Debug\GridExample.exe.config
+C:\Users\Gianluca\Documents\Visual Studio 2015\Simulator\Cellular Automaton Simulation\obj\Debug\GridExample.exe
+C:\Users\Gianluca\Documents\Visual Studio 2015\Simulator\Cellular Automaton Simulation\obj\Debug\GridExample.pdb
