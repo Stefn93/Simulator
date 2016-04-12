@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GridExample
+namespace Simulation
 {
     using System;
     using System.Collections.Generic;

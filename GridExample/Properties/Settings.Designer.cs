@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GridExample.Properties
+namespace Simulation.Properties
 {
 
 

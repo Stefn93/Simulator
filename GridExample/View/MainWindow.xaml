@@ -1,15 +1,17 @@
-﻿<Window x:Class="GridExample.MainWindow"
+﻿<Window x:Class="Simulation.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:GridExample" DataContext="{StaticResource DynamicGrid}"
+        xmlns:local="clr-namespace:Simulation.GridGUI" DataContext="{StaticResource DynamicGrid}"
         mc:Ignorable="d"
         Title="Simulation" SizeToContent="WidthAndHeight" FontSize="16" ResizeMode="NoResize">
     <StackPanel Orientation="Vertical">
-        <local:DynamicGridUserControl x:Name="grid" rows="{Binding Rows}"
+        <local:Grid x:Name="grid" rows="{Binding Rows}"
                                        columns="{Binding Columns}"/>
 
+        
+        <!-- -->
         <!--<Button x:Name ="Button1" Content="Edit" Width="100" HorizontalAlignment="Right" 
                 Command="{Binding EditSelectedItemCommand}" IsEnabled="{Binding CanExecuteEditCommand}" Background="{x:Null}" Foreground="Black"/>-->
 

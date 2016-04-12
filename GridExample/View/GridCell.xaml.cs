@@ -13,14 +13,13 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GridExample.Utils
+namespace Simulation.CellGUI
 {
     /// <summary>
     /// Logica di interazione per GridCell.xaml
     /// </summary>
     public partial class GridCell : UserControl
     {
-
         private Rectangle rectangle;
         private object property;
         private int x;
@@ -28,14 +27,15 @@ namespace GridExample.Utils
 
         public GridCell()
         {
+            InitializeComponent();
             rectangle = new Rectangle();
             rectangle.Width = 10;
             rectangle.Height = 10;
-            rectangle.Fill = new SolidColorBrush(Color.FromRgb(237, 237, 237));
+            rectangle.Fill = new SolidColorBrush(Color.FromRgb(190, 190, 190));
             rectangle.Stroke = new SolidColorBrush((Colors.Transparent));
-            rectangle.StrokeThickness = 2.75;
-            rectangle.RadiusX = 1.5;
-            rectangle.RadiusY = 1.5;
+            rectangle.StrokeThickness = 2;
+            rectangle.RadiusX = 2;
+            rectangle.RadiusY = 2;
         }
 
         public int getX()
@@ -77,7 +77,6 @@ namespace GridExample.Utils
         {
             this.rectangle = rectangle;
         }
+
     }
-   
-    
 }

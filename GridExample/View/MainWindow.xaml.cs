@@ -1,4 +1,4 @@
-﻿using GridExample.Utils;
+﻿using Simulation.CellGUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GridExample
+namespace Simulation
 {
     /// <summary>
     /// Logica di interazione per MainWindow.xaml

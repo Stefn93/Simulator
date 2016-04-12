@@ -1,4 +1,4 @@
-﻿using GridExample.Utils;
+﻿using Simulation.CellGUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,24 +14,24 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GridExample
+namespace Simulation.GridGUI
 {
     /// <summary>
-    /// Logica di interazione per DynamicGrid.xaml
+    /// Logica di interazione per DynamicGridUserControl.xaml
     /// </summary>
-    public partial class DynamicGridUserControl : UserControl
+    public partial class Grid : UserControl
     {
         public static event ChangeGridHandler OnChangeGrid;
         public delegate void ChangeGridHandler();
 
-        public DynamicGridUserControl()
+        public Grid()
         {
             InitializeComponent();
             griglia.Background = new SolidColorBrush(Color.FromRgb(237,237,237));
             OnChangeGrid += SetGrid; // registra il metodo SetGrid al verificarsi dell'evento OnchangedGrid
         }
 
-        #region
+        #region dependency properties
         public int rows
         {
             get { return (int)GetValue(rowsProperty); }
@@ -39,10 +39,8 @@ namespace GridExample
         }
 
         public static readonly DependencyProperty rowsProperty = DependencyProperty.Register("rows", typeof(int),
-            typeof(DynamicGridUserControl), new PropertyMetadata(0, ExamplePropertyChangedCallback, ExampleCoerceValueCallBack));
-        #endregion
+            typeof(Grid), new PropertyMetadata(0, ExamplePropertyChangedCallback, ExampleCoerceValueCallBack));
 
-        #region
         public int columns
         {
             get { return (int)GetValue(columnsProperty); }
@@ -50,9 +48,8 @@ namespace GridExample
         }
 
         public static readonly DependencyProperty columnsProperty = DependencyProperty.Register("columns", typeof(int), 
-            typeof(DynamicGridUserControl), new PropertyMetadata(0, ExamplePropertyChangedCallback, ExampleCoerceValueCallBack));
-        #endregion
-
+            typeof(Grid), new PropertyMetadata(0, ExamplePropertyChangedCallback, ExampleCoerceValueCallBack));
+        #endregion 
 
         //rilascia l'evento che farà modifcare griglia
         private static void ExamplePropertyChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
@@ -96,15 +93,15 @@ namespace GridExample
 
                 if (i != 0)
                 {
-                    int PreviousRowValue = Grid.GetRow(PreviousItem.getRectangle());
-                    int PreviousColumnValue = Grid.GetColumn(PreviousItem.getRectangle());
+                    int PreviousRowValue = System.Windows.Controls.Grid.GetRow(PreviousItem.getRectangle());
+                    int PreviousColumnValue = System.Windows.Controls.Grid.GetColumn(PreviousItem.getRectangle());
 
                     rowValue = PreviousColumnValue < (columns - 1) ? PreviousRowValue : PreviousRowValue += 1;
                     columnValue = PreviousColumnValue < (columns - 1) ? PreviousColumnValue += 1 : 0;
                 }
 
-                Grid.SetColumn(cell.getRectangle(), columnValue);
-                Grid.SetRow(cell.getRectangle(), rowValue);
+                System.Windows.Controls.Grid.SetColumn(cell.getRectangle(), columnValue);
+                System.Windows.Controls.Grid.SetRow(cell.getRectangle(), rowValue);
                 cell.setX(columnValue);
                 cell.setY(rowValue);
 
