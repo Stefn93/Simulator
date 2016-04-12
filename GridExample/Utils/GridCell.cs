@@ -6,22 +6,27 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Shapes;
 
 namespace GridExample.Utils
 {
-    class GridCell : Border
+    class GridCell : UserControl
     {
+        private Rectangle rectangle;
         private object property;
         private int x;
         private int y;
 
         public GridCell()
         {
-            this.Width = 10;
-            this.Height = 10;
-            this.BorderBrush = new SolidColorBrush((Colors.AntiqueWhite));
-            this.Background = new SolidColorBrush((Colors.Black));
-            this.BorderThickness = new Thickness(0.8);
+            rectangle = new Rectangle();
+            rectangle.Width = 10;
+            rectangle.Height = 10;
+            rectangle.Fill = new SolidColorBrush(Color.FromRgb(190,190,190));
+            rectangle.Stroke = new SolidColorBrush((Colors.Transparent));
+            rectangle.StrokeThickness = 2;
+            rectangle.RadiusX = 2;
+            rectangle.RadiusY = 2;
         }
     
         public int getX()
@@ -52,6 +57,16 @@ namespace GridExample.Utils
         public object getProp()
         {
             return property;
+        }
+        
+        public Rectangle getRectangle()
+        {
+            return rectangle;
+        }
+
+        public void setRectangle(Rectangle rectangle)
+        {
+            this.rectangle = rectangle;
         }
         
     }

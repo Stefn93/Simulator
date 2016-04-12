@@ -27,6 +27,7 @@ namespace GridExample
         public DynamicGridUserControl()
         {
             InitializeComponent();
+            griglia.Background = new SolidColorBrush(Color.FromRgb(237,237,237));
             OnChangeGrid += SetGrid; // registra il metodo SetGrid al verificarsi dell'evento OnchangedGrid
         }
 
@@ -90,36 +91,25 @@ namespace GridExample
 
                 GridCell cell = new GridCell();
 
-                if (PreviousItem == null)
-                {
-                    Grid.SetRow(cell, 0);
-                    Grid.SetColumn(cell, 0);
-                    cell.setX(0);
-                    cell.setY(0);
-                }
-                else
-                {
-                    int PreviousRowValue = Grid.GetRow(PreviousItem);
-                    int PreviousColumnValue = Grid.GetColumn(PreviousItem);
+                int rowValue = 0;
+                int columnValue = 0;
 
-                    int rowValue = PreviousColumnValue < (columns - 1) ? PreviousRowValue : PreviousRowValue += 1;
-                    int columnValue = PreviousColumnValue < (columns - 1) ? PreviousColumnValue += 1 : 0;
+                if (i != 0)
+                {
+                    int PreviousRowValue = Grid.GetRow(PreviousItem.getRectangle());
+                    int PreviousColumnValue = Grid.GetColumn(PreviousItem.getRectangle());
 
-                    Grid.SetColumn(cell, columnValue);
-                    Grid.SetRow(cell, rowValue);
-                    cell.setX(columnValue);
-                    cell.setY(rowValue);
+                    rowValue = PreviousColumnValue < (columns - 1) ? PreviousRowValue : PreviousRowValue += 1;
+                    columnValue = PreviousColumnValue < (columns - 1) ? PreviousColumnValue += 1 : 0;
                 }
+
+                Grid.SetColumn(cell.getRectangle(), columnValue);
+                Grid.SetRow(cell.getRectangle(), rowValue);
+                cell.setX(columnValue);
+                cell.setY(rowValue);
+
                 PreviousItem = cell;
-
-                griglia.Children.Add(cell);
-            }
-            
-            foreach (GridCell cell in griglia.Children)
-            {
-                cell.Background = new SolidColorBrush(Colors.DarkBlue);
-                //Console.Out.WriteLine(cell.getX());
-                //Console.Out.WriteLine(cell.getY());
+                griglia.Children.Add(cell.getRectangle());
             }
 
         }

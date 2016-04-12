@@ -24,14 +24,14 @@ namespace GridExample.ViewModel
             }
         }
 
-        private int rows = 50;
+        private int rows = 90;
         public int Rows
         {
             get { return rows; }
             set { rows = value; NotifyPropertyChanged("Rows"); }
         }
 
-        private int columns = 100;
+        private int columns = 160;
         public int Columns
         {
             get { return columns; }
