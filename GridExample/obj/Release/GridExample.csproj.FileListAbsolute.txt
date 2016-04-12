@@ -34,3 +34,5 @@ C:\Users\Stefano\Documents\GitHub\Simulator\GridExample\obj\Release\View\MainWin
 C:\Users\Stefano\Documents\GitHub\Simulator\GridExample\obj\Release\GridExample.g.resources
 C:\Users\Stefano\Documents\GitHub\Simulator\GridExample\obj\Release\GridExample.Properties.Resources.resources
 C:\Users\Stefano\Documents\GitHub\Simulator\GridExample\obj\Release\GridExample.csproj.GenerateResource.Cache
+C:\Users\Stefano\Documents\GitHub\Simulator\GridExample\obj\Release\Utils\GridCell.g.cs
+C:\Users\Stefano\Documents\GitHub\Simulator\GridExample\obj\Release\Utils\GridCell.baml

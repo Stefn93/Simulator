@@ -55,6 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Utils\GridCell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\DynamicGridUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -68,7 +72,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Command\RelayCommand.cs" />
-    <Compile Include="Utils\GridCell.cs" />
+    <Compile Include="Utils\GridCell.xaml.cs">
+      <DependentUpon>GridCell.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\DynamicGridUserControl.xaml.cs">
       <DependentUpon>DynamicGridUserControl.xaml</DependentUpon>
     </Compile>

@@ -10,11 +10,11 @@ none
 false
 TRACE
 C:\Users\Stefano\Documents\GitHub\Simulator\GridExample\App.xaml
-2-149434103
+3546050943
 
-131933739837
+131828450893
 13738642453
-View\DynamicGridUserControl.xaml;View\MainWindow.xaml;
+Utils\GridCell.xaml;View\DynamicGridUserControl.xaml;View\MainWindow.xaml;
 
-True
+False
 
