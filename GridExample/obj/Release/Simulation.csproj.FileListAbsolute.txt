@@ -18,3 +18,6 @@ C:\Users\Stefano\Documents\GitHub\Simulator\GridExample\obj\Release\Simulation.c
 C:\Users\Stefano\Documents\GitHub\Simulator\GridExample\obj\Release\GridExample.exe
 C:\Users\Stefano\Documents\GitHub\Simulator\GridExample\obj\Release\GridExample.pdb
 C:\Users\Stefano\Documents\GitHub\Simulator\GridExample\obj\Release\Simulation.csprojResolveAssemblyReference.cache
+C:\Users\Gianluca\Documents\Visual Studio 2015\Simulator\GridExample\bin\Release\GridExample.exe.config
+C:\Users\Gianluca\Documents\Visual Studio 2015\Simulator\GridExample\obj\Release\GridExample.exe
+C:\Users\Gianluca\Documents\Visual Studio 2015\Simulator\GridExample\obj\Release\GridExample.pdb

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Stefano\Documents\GitHub\Simulator\GridExample\obj\Release\
+C:\Users\Gianluca\Documents\Visual Studio 2015\Simulator\GridExample\obj\Release\
 GridExample
 none
 false
 TRACE
-C:\Users\Stefano\Documents\GitHub\Simulator\GridExample\App.xaml
+C:\Users\Gianluca\Documents\Visual Studio 2015\Simulator\GridExample\App.xaml
 32023205760
 
-13-1297458691
+23-1561957377
 13738642453
 View\GridCell.xaml;View\DynamicGridUserControl.xaml;View\MainWindow.xaml;
 
-True
+False
 
