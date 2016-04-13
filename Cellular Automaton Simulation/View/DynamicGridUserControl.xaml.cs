@@ -82,38 +82,20 @@ namespace Simulation.GridGUI
                 grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(10, GridUnitType.Auto) });
             }
 
-            //int TotalItems = rows * columns;
-            GridCell PreviousItem = null;
+            
             for (int i = 0; i < columns; i++)
             {
                 for (int j = 0; j < rows; j++)
                 {
-                    GridCell cell = new GridCell();
+                    cells[i, j] = new GridCell();
 
-                    //int rowValue = 0;
-                    //int columnValue = 0;
+                    System.Windows.Controls.Grid.SetColumn(cells[i,j].getRectangle(), i);
+                    System.Windows.Controls.Grid.SetRow(cells[i,j].getRectangle(), j);
 
-                    //if (i != 0 && j != 0)
-                    //{
-                    //    int PreviousRowValue = System.Windows.Controls.Grid.GetRow(PreviousItem.getRectangle());
-                    //    int PreviousColumnValue = System.Windows.Controls.Grid.GetColumn(PreviousItem.getRectangle());
-
-                    //    //rowValue = PreviousColumnValue < (columns - 1) ? PreviousRowValue : PreviousRowValue += 1;
-                    //    //columnValue = PreviousColumnValue < (columns - 1) ? PreviousColumnValue += 1 : 0;
-                    //}
-
-                    System.Windows.Controls.Grid.SetColumn(cell.getRectangle(), i);
-                    System.Windows.Controls.Grid.SetRow(cell.getRectangle(), j);
-                    cells[i, j] = cell;
-                    //cell.setX(columnValue);
-                    //cell.setY(rowValue);
-
-                    PreviousItem = cell;
-                    grid.Children.Add(cell.getRectangle());
+                    grid.Children.Add(cells[i,j].getRectangle());
                 }
             }
-            Console.WriteLine(cells[0, 0]);
-            //cells[0, 0].getRectangle().Fill = new SolidColorBrush(Colors.Black);
+            //cells[2, 2].getRectangle().Fill = new SolidColorBrush(Colors.Black);
         }
 
         public GridCell getCell(int x, int y)
