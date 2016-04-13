@@ -6,5 +6,5 @@
              xmlns:local="clr-namespace:Simulation.GridGUI"
              mc:Ignorable="d" 
              d:DesignHeight="325" d:DesignWidth="525">
-    <Grid x:Name="griglia" Background="WhiteSmoke"/>
+    <Grid x:Name="grid" Background="WhiteSmoke"/>
 </UserControl>

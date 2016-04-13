@@ -10,8 +10,8 @@
         <local:Grid x:Name="grid" rows="{Binding Rows}"
                                        columns="{Binding Columns}"/>
 
-        
-        <!-- -->
+
+        <!-- rows="{Binding Rows}" columns="{Binding Columns}"/>-->
         <!--<Button x:Name ="Button1" Content="Edit" Width="100" HorizontalAlignment="Right" 
                 Command="{Binding EditSelectedItemCommand}" IsEnabled="{Binding CanExecuteEditCommand}" Background="{x:Null}" Foreground="Black"/>-->
 

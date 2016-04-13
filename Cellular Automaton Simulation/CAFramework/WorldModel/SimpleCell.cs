@@ -10,10 +10,11 @@ namespace CASimulation.CAFramework.WorldModel
     {
         private T value;
         private T revaluatedValue;
+        private bool revaluated = false;
 
         public T getValue()
         {
-            return value; ;
+            return value;
         }
 
         public void setValue(T value)
@@ -32,10 +33,9 @@ namespace CASimulation.CAFramework.WorldModel
         }
 
         public void revaluateCell(T value)
-        {
-
+        { 
             revaluated = false;
-            this.revaluatedValue = value;
+            revaluatedValue = value;
         }
 
         public bool isRevaluated()
@@ -43,6 +43,5 @@ namespace CASimulation.CAFramework.WorldModel
             return revaluated;
         }
 
-        private bool revaluated = false;
     }
 }

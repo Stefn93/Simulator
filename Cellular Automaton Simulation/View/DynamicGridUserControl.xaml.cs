@@ -23,12 +23,14 @@ namespace Simulation.GridGUI
     {
         public static event ChangeGridHandler OnChangeGrid;
         public delegate void ChangeGridHandler();
+        private GridCell[,] cells = new GridCell[160,80];
 
         public Grid()
         {
             InitializeComponent();
-            griglia.Background = new SolidColorBrush(Color.FromRgb(237,237,237));
-            OnChangeGrid += SetGrid; // registra il metodo SetGrid al verificarsi dell'evento OnchangedGrid
+            grid.Background = new SolidColorBrush(Color.FromRgb(237,237,237));
+
+            OnChangeGrid += Update; // registra il metodo Update al verificarsi dell'evento OnchangedGrid
         }
 
         #region dependency properties
@@ -64,52 +66,70 @@ namespace Simulation.GridGUI
             return value;
         }
 
-
-        private void SetGrid()
+        private void Update()
         {
-            griglia.RowDefinitions.Clear();
-            griglia.ColumnDefinitions.Clear();
+            grid.RowDefinitions.Clear();
+            grid.ColumnDefinitions.Clear();
 
 
             for (int i = 0; i < rows; i++)
             {
-                griglia.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(10, GridUnitType.Auto) });
+                grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(10, GridUnitType.Auto) });
             }
 
             for (int i = 0; i < columns; i++)
             {
-                griglia.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(10, GridUnitType.Auto) });
+                grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(10, GridUnitType.Auto) });
             }
 
-            int TotalItems = rows * columns;
+            //int TotalItems = rows * columns;
             GridCell PreviousItem = null;
-            for (int i = 0; i < TotalItems; i++)
+            for (int i = 0; i < columns; i++)
             {
-
-                GridCell cell = new GridCell();
-
-                int rowValue = 0;
-                int columnValue = 0;
-
-                if (i != 0)
+                for (int j = 0; j < rows; j++)
                 {
-                    int PreviousRowValue = System.Windows.Controls.Grid.GetRow(PreviousItem.getRectangle());
-                    int PreviousColumnValue = System.Windows.Controls.Grid.GetColumn(PreviousItem.getRectangle());
+                    GridCell cell = new GridCell();
 
-                    rowValue = PreviousColumnValue < (columns - 1) ? PreviousRowValue : PreviousRowValue += 1;
-                    columnValue = PreviousColumnValue < (columns - 1) ? PreviousColumnValue += 1 : 0;
+                    //int rowValue = 0;
+                    //int columnValue = 0;
+
+                    //if (i != 0 && j != 0)
+                    //{
+                    //    int PreviousRowValue = System.Windows.Controls.Grid.GetRow(PreviousItem.getRectangle());
+                    //    int PreviousColumnValue = System.Windows.Controls.Grid.GetColumn(PreviousItem.getRectangle());
+
+                    //    //rowValue = PreviousColumnValue < (columns - 1) ? PreviousRowValue : PreviousRowValue += 1;
+                    //    //columnValue = PreviousColumnValue < (columns - 1) ? PreviousColumnValue += 1 : 0;
+                    //}
+
+                    System.Windows.Controls.Grid.SetColumn(cell.getRectangle(), i);
+                    System.Windows.Controls.Grid.SetRow(cell.getRectangle(), j);
+                    cells[i, j] = cell;
+                    //cell.setX(columnValue);
+                    //cell.setY(rowValue);
+
+                    PreviousItem = cell;
+                    grid.Children.Add(cell.getRectangle());
                 }
-
-                System.Windows.Controls.Grid.SetColumn(cell.getRectangle(), columnValue);
-                System.Windows.Controls.Grid.SetRow(cell.getRectangle(), rowValue);
-                cell.setX(columnValue);
-                cell.setY(rowValue);
-
-                PreviousItem = cell;
-                griglia.Children.Add(cell.getRectangle());
             }
-
+            Console.WriteLine(cells[0, 0]);
+            //cells[0, 0].getRectangle().Fill = new SolidColorBrush(Colors.Black);
         }
-        
+
+        public GridCell getCell(int x, int y)
+        {
+            return cells[x, y];
+        }
+
+        public System.Windows.Controls.Grid getGrid()
+        {
+            return grid;
+        }
+
+        public void setGrid(System.Windows.Controls.Grid grid)
+        {
+            this.grid = grid;
+        }
+
     }
 }

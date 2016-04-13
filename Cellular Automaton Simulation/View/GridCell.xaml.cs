@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CASimulation.CAFramework.WorldModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,7 +22,6 @@ namespace Simulation.CellGUI
     public partial class GridCell : UserControl
     {
         private Rectangle rectangle;
-        private object property;
         private int x;
         private int y;
 
@@ -32,7 +32,7 @@ namespace Simulation.CellGUI
             rectangle.Width = 10;
             rectangle.Height = 10;
             rectangle.Fill = new SolidColorBrush(Color.FromRgb(190, 190, 190));
-            rectangle.Stroke = new SolidColorBrush((Colors.Transparent));
+            rectangle.Stroke = new SolidColorBrush(Colors.Transparent);
             rectangle.StrokeThickness = 2;
             rectangle.RadiusX = 2;
             rectangle.RadiusY = 2;
@@ -56,16 +56,6 @@ namespace Simulation.CellGUI
         public void setY(int y)
         {
             this.y = y;
-        }
-
-        public void setProp(object property)
-        {
-            this.property = property;
-        }
-
-        public object getProp()
-        {
-            return property;
         }
 
         public Rectangle getRectangle()

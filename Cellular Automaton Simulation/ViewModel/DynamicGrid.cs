@@ -24,7 +24,7 @@ namespace Simulation.ViewModel
             }
         }
 
-        private int rows = 90;
+        private int rows = 80;
         public int Rows
         {
             get { return rows; }

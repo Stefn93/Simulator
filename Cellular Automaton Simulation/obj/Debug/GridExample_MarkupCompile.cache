@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Stefano\Documents\GitHub\GridExample\GridExample\obj\Debug\
+C:\Users\Stefano\Documents\GitHub\Simulator\Cellular Automaton Simulation\obj\Debug\
 GridExample
 none
 false
 DEBUG;TRACE
-C:\Users\Stefano\Documents\GitHub\GridExample\GridExample\App.xaml
-2-149434103
+C:\Users\Stefano\Documents\GitHub\Simulator\Cellular Automaton Simulation\App.xaml
+32023205760
 
-9-361445218
+19945104669
 13738642453
-View\DynamicGridUserControl.xaml;View\MainWindow.xaml;
+View\GridCell.xaml;View\DynamicGridUserControl.xaml;View\MainWindow.xaml;
 
 False
 
