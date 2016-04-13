@@ -1,4 +1,5 @@
-﻿using CASimulation.CAFramework.WorldModel;
+﻿using CASimulation.CAFramework.GUI;
+using CASimulation.CAFramework.WorldModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace Simulation.CellGUI
     /// <summary>
     /// Logica di interazione per GridCell.xaml
     /// </summary>
-    public partial class GridCell : UserControl
+    public partial class GridCell : UserControl, CellGraphic
     {
         private Rectangle rectangle;
         private int x;
@@ -58,15 +59,11 @@ namespace Simulation.CellGUI
             this.y = y;
         }
 
-        public Rectangle getRectangle()
+        public Shape getShape()
         {
             return rectangle;
         }
 
-        public void setRectangle(Rectangle rectangle)
-        {
-            this.rectangle = rectangle;
-        }
 
     }
 }

@@ -1,4 +1,5 @@
-﻿using Simulation.CellGUI;
+﻿using CASimulation.CAFramework.WorldModel;
+using Simulation.CellGUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,7 @@ namespace Simulation
         public MainWindow()
         {
             InitializeComponent();
+            grid.getCell(new Coordinates2D(2, 2)).getShape().Fill = new SolidColorBrush(Colors.Black);
         }
 
     }

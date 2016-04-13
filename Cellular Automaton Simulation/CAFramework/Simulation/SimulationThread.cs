@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using CASimulation.CAFramework.WorldModel;
+using CASimulation.CAFramework.GUI;
 
 namespace CASimulation.CAFramework.Simulation
 {
@@ -12,6 +13,8 @@ namespace CASimulation.CAFramework.Simulation
     {
         protected World<CellType> world;
         protected Behaviour<CellType> behaviour;
+        protected WorldGUI worldGui;
+        protected Drawer<CellType> drawer;
         protected Thread thread;
 
         public SimulationThread(World<CellType> world, Behaviour<CellType> behaviour)  {
@@ -22,7 +25,9 @@ namespace CASimulation.CAFramework.Simulation
         protected void incrementGeneration()
         {
             world.setGeneration(world.getGeneration() + 1);
+            behaviour.calculateGrid(world);
             world.nextState();
+            drawer.draw(worldGui, world);
         }
 
         public World<CellType> getWorld()

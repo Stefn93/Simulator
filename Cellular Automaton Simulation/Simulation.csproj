@@ -71,6 +71,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="CAFramework\GUI\Drawer.cs" />
+    <Compile Include="CAFramework\GUI\WorldGUI.cs" />
     <Compile Include="CAFramework\Simulation\Behaviour.cs" />
     <Compile Include="CAFramework\Simulation\SimulationThread.cs" />
     <Compile Include="CAFramework\WorldModel\Cell.cs" />
@@ -82,6 +84,7 @@
     <Compile Include="CAFramework\WorldModel\World.cs" />
     <Compile Include="CAFramework\WorldModel\WorldDimension.cs" />
     <Compile Include="Command\RelayCommand.cs" />
+    <Compile Include="CAFramework\GUI\CellGraphic.cs" />
     <Compile Include="View\GridCell.xaml.cs">
       <DependentUpon>GridCell.xaml</DependentUpon>
     </Compile>
@@ -121,9 +124,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CAFramework\GUI\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

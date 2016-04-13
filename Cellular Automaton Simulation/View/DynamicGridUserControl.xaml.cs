@@ -1,4 +1,6 @@
-﻿using Simulation.CellGUI;
+﻿using CASimulation.CAFramework.GUI;
+using CASimulation.CAFramework.WorldModel;
+using Simulation.CellGUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +21,7 @@ namespace Simulation.GridGUI
     /// <summary>
     /// Logica di interazione per DynamicGridUserControl.xaml
     /// </summary>
-    public partial class Grid : UserControl
+    public partial class Grid : UserControl, WorldGUI
     {
         public static event ChangeGridHandler OnChangeGrid;
         public delegate void ChangeGridHandler();
@@ -70,37 +72,31 @@ namespace Simulation.GridGUI
         {
             grid.RowDefinitions.Clear();
             grid.ColumnDefinitions.Clear();
-
-
-            for (int i = 0; i < rows; i++)
-            {
-                grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(10, GridUnitType.Auto) });
-            }
-
-            for (int i = 0; i < columns; i++)
-            {
-                grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(10, GridUnitType.Auto) });
-            }
-
             
             for (int i = 0; i < columns; i++)
             {
+                grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(10, GridUnitType.Auto) });
                 for (int j = 0; j < rows; j++)
                 {
+                    grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(10, GridUnitType.Auto) });
                     cells[i, j] = new GridCell();
 
-                    System.Windows.Controls.Grid.SetColumn(cells[i,j].getRectangle(), i);
-                    System.Windows.Controls.Grid.SetRow(cells[i,j].getRectangle(), j);
+                    System.Windows.Controls.Grid.SetColumn(cells[i,j].getShape(), i);
+                    System.Windows.Controls.Grid.SetRow(cells[i,j].getShape(), j);
 
-                    grid.Children.Add(cells[i,j].getRectangle());
+                    grid.Children.Add(cells[i,j].getShape());
                 }
             }
             //cells[2, 2].getRectangle().Fill = new SolidColorBrush(Colors.Black);
         }
 
-        public GridCell getCell(int x, int y)
+        public CellGraphic getCell(Coordinates coord)
         {
-            return cells[x, y];
+            if (coord.GetType() == typeof(Coordinates2D)) {
+                Coordinates2D c = (Coordinates2D) coord;
+                return cells[c.getX(), c.getY()];
+            }
+            return null;
         }
 
         public System.Windows.Controls.Grid getGrid()
