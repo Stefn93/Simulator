@@ -9,6 +9,6 @@ namespace CASimulation.CAFramework.Simulation
 {
     public interface Behaviour<CellType>
     {
-        public void calculateGrid(World<CellType> grid);
+        void calculateGrid(World<CellType> grid);
     }
 }

@@ -31,6 +31,7 @@ namespace CASimulation.CAFramework.Simulation
         }
 
         public abstract void Run();
+
         public void start()
         {
             thread = new Thread(Run);

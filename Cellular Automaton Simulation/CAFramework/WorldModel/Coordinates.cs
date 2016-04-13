@@ -8,6 +8,6 @@ namespace CASimulation.CAFramework.WorldModel
 {
     public interface Coordinates
     {
-        public int[] getCoordinates();
+        int[] getCoordinates();
     }
 }
